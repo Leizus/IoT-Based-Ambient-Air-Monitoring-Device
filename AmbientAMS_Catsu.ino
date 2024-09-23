@@ -15,12 +15,8 @@
   char pass[] = "[Your Network Pass]";
 
 
-
-
-
               // s0 s1 s2 s3: select pins
   CD74HC4067 mux(D0, D1, D2, D3);  // create a new CD74HC4067 object with its four select lines - 8,9,10,11
-
 
   const int SIG = A0; // Pin A0 - Connected to Sig pin of CD74HC4067
 
@@ -58,15 +54,7 @@
     Serial.print(BlynkSM);
     Serial.println();
     Serial.println(" ");
-
-
-
-
   }
-
-
-
-  
 
   void setup()
   {
@@ -75,18 +63,15 @@
       timer.setInterval(1000L, sendData);
       
       pinMode(SIG, INPUT); // Set as input for reading through signal pin
-      
 
       Wire.begin(D5, D6);   //Use predefined PINS consts
       lcd.begin(20,4);      // The begin call takes the width and height. This
                       // Should match the number provided to the constructor.
 
       lcd.backlight();      // Turn on the backlight.
-
       lcd.home();
-
       lcd.setCursor(0, 0);  // Move the cursor at origin
-
+    
       lcd.println("Connecting to WiFi..");
       delay(500);
       lcd.clear();
@@ -98,6 +83,7 @@
         delay(500);
         Serial.print(".");
       }
+  
       delay(1000);
       lcd.clear();
       lcd.println(" ");
@@ -117,9 +103,6 @@
       lcd.print("System");
       delay(1000);
       lcd.clear();
-    
-
-
   }
 
 
@@ -139,7 +122,6 @@
     int valMQ7 = analogRead(SIG); 
     delay(500);
 
-    
     mux.channel(0);
     int valMQ2 = analogRead(SIG); 
     delay(500);
@@ -164,8 +146,6 @@
     lcd.print(valMQ7);
     lcd.setCursor(16, 2);
     lcd.print("ppm");
-    
-
 
     //MQ2 Methane
     lcd.setCursor(0, 3);
