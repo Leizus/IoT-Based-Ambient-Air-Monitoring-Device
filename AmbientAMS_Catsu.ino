@@ -1,7 +1,7 @@
 
   #define BLYNK_TEMPLATE_ID "TMPL6CScbsN0c"
   #define BLYNK_TEMPLATE_NAME "Ambient Air Monitoring System"
-  #define BLYNK_AUTH_TOKEN "TejDRNJGppm8G_ARlwCCP506Iztody4R"
+  #define BLYNK_AUTH_TOKEN "[Your Auth Token]"
   #include <LiquidCrystal_I2C.h>
   #include <light_CD74HC4067.h>
   #include <ESP8266WiFi.h>
@@ -10,9 +10,9 @@
   BlynkTimer timer;
   LiquidCrystal_I2C lcd(0x27, 20, 4);
   WiFiClient client;
-  char auth[] = "TejDRNJGppm8G_ARlwCCP506Iztody4R";
-  char ssid[] = "Three Point A13";
-  char pass[] = "threepointonefour";
+  char auth[] = "[Your Auth Token]";
+  char ssid[] = "[Your Network ID]";
+  char pass[] = "[Your Network Pass]";
 
 
 
