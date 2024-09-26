@@ -1,5 +1,5 @@
 
-  #define BLYNK_TEMPLATE_ID "TMPL6CScbsN0c"
+  #define BLYNK_TEMPLATE_ID "[Your Blynk Template ID]"
   #define BLYNK_TEMPLATE_NAME "Ambient Air Monitoring System"
   #define BLYNK_AUTH_TOKEN "[Your Auth Token]"
   #include <LiquidCrystal_I2C.h>
